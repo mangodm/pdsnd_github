@@ -10,7 +10,7 @@ VALID_MONTH = ['all', 'jan', 'feb', 'mar', 'apr', 'may', 'jun']
 VALID_DOW = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'all']
 VALID_COLUMNS = ['Start Time', 'End Time', 'Trip Duration', 'Start Station', 'End Station', 'User Type', 'Gender', 'Birth Year']
 
-def get_filters() -> Tuple[str, str, str]:
+def get_data_filters() -> Tuple[str, str, str]:
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -232,7 +232,7 @@ def user_stats(df: pd.DataFrame, city: str) -> None:
 
 def main():
     while True:
-        city, month, day = get_filters()
+        city, month, day = get_data_filters()
         df = load_data(city, month, day)
 
         # Run calculations and print them
