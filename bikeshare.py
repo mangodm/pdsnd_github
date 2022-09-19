@@ -69,7 +69,7 @@ def get_filters() -> Tuple[str, str, str]:
 
 def return_mappings(valid_list: object) -> object:
     """
-    Returns mappings corresponding to the integers.
+    Returns mappings between an item and an integer value.
 
     Args:
         (List) valid_list - list of valid values
