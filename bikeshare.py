@@ -111,7 +111,7 @@ def load_data(city: str, month: str, day: str) -> pd.DataFrame:
         return df[(df['Start Time'].dt.month == VALID_MONTH_MAPPED.get(month)) &
                   (df['Start Time'].dt.dayofweek == VALID_DOW_MAPPED.get(day))]
 
-def calculate_mode(df: pd.DataFrame, field: str, index: str = None) -> Union[int, str, float]:
+def calculate_mode_value(df: pd.DataFrame, field: str, index: str = None) -> Union[int, str, float]:
     """
     Finds the mostly frequently occurring value in the given column.
 
@@ -141,13 +141,13 @@ def time_stats(df: pd.DataFrame) -> None:
     start_time = time.time()
 
     # Display the most common month
-    print(f"The most common month: {calculate_mode(df, 'Start Time', 'month')}")
+    print(f"The most common month: {calculate_mode_value(df, 'Start Time', 'month')}")
 
     # Display the most common day of week
-    print(f"The most common day of week: {calculate_mode(df, 'Start Time', 'dayofweek')}")
+    print(f"The most common day of week: {calculate_mode_value(df, 'Start Time', 'dayofweek')}")
 
     # Display the most common start hour
-    print(f"The most common start hour: {calculate_mode(df, 'Start Time', 'hour')}")
+    print(f"The most common start hour: {calculate_mode_value(df, 'Start Time', 'hour')}")
 
     print(f"This took {round(time.time()-start_time, 2)} seconds.")
     print('-'*50)
