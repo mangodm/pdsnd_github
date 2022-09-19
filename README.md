@@ -1,7 +1,9 @@
 # Explore US Bikeshare Data
 
 ## Overview
-This repo contains an interactive program which lets users explore data related to bike-sharing systems for three cities in the United States - Chicago, New York City, and Washington. The program helps users to understand the features of bike share usage patterns in three cities. Here are some key information provided in the program:
+This repo contains an interactive program which lets users explore data related to bike-sharing systems for three cities in the United States - Chicago, New York City, and Washington. The program helps users to understand the features of bike share usage patterns in three cities. 
+
+Here are some key information provided in the program:
 
 **1. Popular times of travel** (i.e., occurs most often in the start time)
 - most common month
